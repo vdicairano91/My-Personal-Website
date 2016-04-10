@@ -1,0 +1,223 @@
+/*
+yello: #FF9126;
+orange1: #E86723;
+orange2: #FF5C33;
+red: #E82E23;
+pink: #FF266A;
+*/
+
+
+* {
+    font-family: 'Raleway', sans-serif;
+    color: #242424;
+}
+a {
+    color: #FF5C33;
+}
+p, li {
+    font-size: 1.25em;
+}
+.light-text {
+    color: #D9D9D9;
+}
+
+/*INTRO*/
+
+.intro {
+    background: url(http://36.media.tumblr.com/f6398d4ed605ca10f318541edd2ddb77/tumblr_nw4mul0bnE1qdcwigo1_1280.jpg) 50% 0% no-repeat;
+    background-size: cover;
+    height: 600px; 
+}
+.hero {
+    height: 200px;
+    background-color: rgba(36, 36, 36, 0.7);
+    margin-top: 5em;
+}
+h2 {
+    font-family: 'Bree Serif', serif;
+    font-size: 3em;
+    margin-top: 0.25em;
+}
+@media only screen and (min-width: 768px) {
+    .hero {
+        height: 250px;
+    }
+    .intro {
+        height: 999px;
+    }
+    h2 {
+        font-size: 4.55em;
+    }
+}
+/*ABOUT*/
+
+.about {
+    background-color: #ADADAD;
+    min-height: 500px;
+    padding: 6em 0 8em 0;
+}
+.about img {
+    padding: 0 0 3em 0;
+}
+.about-header {
+    font-size: 2.5em;
+    font-family: 'Bree Serif', serif;
+    padding: 0 0 0.5em 0;
+    margin: 0;
+}
+
+/*PROJECTS*/
+
+.projects {
+    background-color: #4C4C4C;
+    min-height: 500px;
+    padding: 3em 0 5em;
+}
+.projects-title {
+    font-family: 'Bree Serif', serif;
+    font-size: 4.55em;
+    line-height: 1.3em;
+    padding: 0;
+    margin: 0 0 25px 0;
+}
+.projects img {
+    padding: 0 0 20px 0;
+}
+
+/*RESUME*/
+
+.resume {
+    background-color: #f7f7f7;
+    min-height: 500px;
+    padding: 3em 0 5em;
+}
+.resume-title {
+    padding: 10px 0;
+}
+.resume-title span {
+    font-size: 2.5em;
+    border-bottom: 3px solid #FF266A;
+}
+.resume-job,
+.resume-position {
+    font-size: 1.75em;
+    font-family: 'Bree Serif', serif;
+    padding: 30px 0 5px 0;
+}
+.resume-date,
+.resume-description {
+    font-size: 1.25em;
+    color: #666666;
+}
+.divider {
+    margin-top: 45px;
+    margin-bottom: 45px;
+    border-bottom: dashed 1px #FF266A;
+    height: 1px;
+}
+.bar {
+    width: 100%;
+}
+.bar .skills {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.bar li {
+    position: relative;
+    background: #ADADAD;
+    height: 30px;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+.bar li p {
+    position: relative;
+    left: 5px;
+    color: #f7f7f7;
+}
+.bar-expand {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #242424;
+    height: 30px;
+    border-radius: 5px 0 0 5px;
+}
+.bar-expand.expert {
+    width: 95%;
+}
+.bar-expand.pro {
+    width: 85%;
+}
+.bar-expand.intermediate {
+    width: 60%;
+}
+.bar-expand.learning {
+    width: 50%;
+}
+.bar-expand.novice {
+    width: 40%;
+}
+@media only screen and (min-width: 768px) {
+    .bar {
+        width: 95%;
+    }
+    .bar-expand.learning {
+        width: 45%;
+    }
+    .bar-expand.novice {
+        width: 30%;
+    }
+}
+
+/*SUBFOOTER*/
+
+.subfooter {
+    background-color: #363636;
+    padding: 7em 0 6em;
+}
+.email-icon {
+    margin-top: 4px;
+}
+.email-icon img {
+    height: 110px;
+}
+.social-icon {
+    display: inline-block;
+    height: 35px;
+    padding: 0 20px;
+}
+.email-text {
+    text-align: center;
+}
+@media only screen and (min-width: 768px) {
+    .email-icon img {
+        height: 120px;
+    }
+    .email-text {
+        text-align: left;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .social-icon {
+        padding: 0 30px 0 20px;
+    }
+}
+
+/*FOOTER*/
+
+footer {
+    background-color: #242424;
+    padding: 7em 0 3em;
+    font-size: 0.8em;
+}
+footer .glyphicon {
+    vertical-align: text-top;
+}
+@media only screen and (min-width: 768px) {
+    footer {
+        background-color: #242424;
+        padding: 7em 0 3em;
+        font-size: 1.125em;
+    }
+}
