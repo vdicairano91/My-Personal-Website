@@ -1,18 +1,12 @@
-/*
-yello: #FF9126;
-orange1: #E86723;
-orange2: #FF5C33;
-red: #E82E23;
-pink: #FF266A;
-*/
-
-
 * {
     font-family: 'Raleway', sans-serif;
     color: #242424;
 }
-a {
-    color: #FF5C33;
+a, a:visited {
+    color: #FF266A;
+}
+a:hover, a:active{
+    color: inherit;
 }
 p, li {
     font-size: 1.25em;
