@@ -4,6 +4,7 @@
 }
 a, a:visited {
     color: #FF266A;
+    animation: hue-rotate 20s infinite linear;;
 }
 a:hover, a:active{
     color: inherit;
@@ -18,13 +19,31 @@ p, li {
 /*INTRO*/
 
 .intro {
-    background: url(http://36.media.tumblr.com/f6398d4ed605ca10f318541edd2ddb77/tumblr_nw4mul0bnE1qdcwigo1_1280.jpg) 50% 0% no-repeat;
-    background-size: cover;
-    height: 600px; 
+    height: 300px; 
+    background: #ff70d8;
+    background: -moz-linear-gradient(45deg,  #ff70d8 0%, #f8ff7f 100%);
+    background: -webkit-linear-gradient(45deg,  #ff70d8 0%,#f8ff7f 100%);
+    background: linear-gradient(45deg,  #ff70d8 0%,#f8ff7f 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff70d8', endColorstr='#f8ff7f',GradientType=1 );
+    animation: hue-rotate 20s infinite linear;
+    -webkit-animation: hue-rotate 20s infinite linear;
+    animation-delay: 2s;
+    -webkit-animation-delay: 2s;
+}
+@-webkit-keyframes hue-rotate {
+    from {
+        filter: hue-rotate(0deg);
+        -webkit-filter: hue-rotate(0deg);
+    }
+
+    to {
+        filter: hue-rotate(360deg);
+        -webkit-filter: hue-rotate(360deg);
+    }
 }
 .hero {
     height: 200px;
-    background-color: rgba(36, 36, 36, 0.7);
+    z-index: 99;
     margin-top: 5em;
 }
 h2 {
@@ -37,10 +56,10 @@ h2 {
         height: 250px;
     }
     .intro {
-        height: 999px;
+        height: 450px;
     }
     h2 {
-        font-size: 4.55em;
+        font-size: 6em;
     }
 }
 /*ABOUT*/
