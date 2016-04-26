@@ -1,217 +1,224 @@
 * {
-    font-family: 'Raleway', sans-serif;
-    color: #212121;
+  font-family: 'Raleway', sans-serif;
+  color: #212121;
 }
 a, a:visited {
-    color: #FF266A;
-    animation: hue-rotate 20s infinite linear;;
+  color: #FF266A;
+  animation: hue-rotate 20s infinite linear;;
 }
 a:hover, a:active{
-    color: inherit;
+  color: inherit;
 }
 p, li {
-    font-size: 1.25em;
+  font-size: 1.25em;
 }
 .light-text {
-    color: #FAFAFA;
+  color: #FAFAFA;
 }
 
 /*INTRO*/
 
 .intro {
-    height: 300px; 
-    background: #ff70d8;
-    background: -moz-linear-gradient(45deg,  #ff70d8 0%, #f8ff7f 100%);
-    background: -webkit-linear-gradient(45deg,  #ff70d8 0%,#f8ff7f 100%);
-    background: linear-gradient(45deg,  #ff70d8 0%,#f8ff7f 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff70d8', endColorstr='#f8ff7f',GradientType=1 );
-    animation: hue-rotate 20s infinite linear;
-    -webkit-animation: hue-rotate 20s infinite linear;
-    animation-delay: 2s;
-    -webkit-animation-delay: 2s;
+  height: 300px; 
+  background: #ff70d8;
+  background: -moz-linear-gradient(45deg,  #ff70d8 0%, #f8ff7f 100%);
+  background: -webkit-linear-gradient(45deg,  #ff70d8 0%,#f8ff7f 100%);
+  background: linear-gradient(45deg,  #ff70d8 0%,#f8ff7f 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff70d8', endColorstr='#f8ff7f',GradientType=1 );
+  animation: hue-rotate 20s infinite linear;
+  -webkit-animation: hue-rotate 20s infinite linear;
+  animation-delay: 2s;
+  -webkit-animation-delay: 2s;
+}
+@keyframes hue-rotate {
+  from {
+    filter: hue-rotate(0deg);
+  }
+
+  to {
+    filter: hue-rotate(360deg);
+  }
 }
 @-webkit-keyframes hue-rotate {
-    from {
-        filter: hue-rotate(0deg);
-        -webkit-filter: hue-rotate(0deg);
-    }
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
 
-    to {
-        filter: hue-rotate(360deg);
-        -webkit-filter: hue-rotate(360deg);
-    }
+  to {
+    -webkit-filter: hue-rotate(360deg);
+  }
 }
 .hero {
-    height: 200px;
-    z-index: 99;
-    margin-top: 5em;
+  height: 200px;
+  z-index: 99;
+  margin-top: 5em;
 }
 h2 {
-    font-family: 'Bree Serif', serif;
-    font-size: 3em;
-    margin-top: 0.25em;
+  font-family: 'Bree Serif', serif;
+  font-size: 3em;
+  margin-top: 0.25em;
 }
 @media only screen and (min-width: 768px) {
-    .hero {
-        height: 250px;
-    }
-    .intro {
-        height: 450px;
-    }
-    h2 {
-        font-size: 6em;
-    }
+  .hero {
+    height: 250px;
+  }
+  .intro {
+    height: 450px;
+  }
+  h2 {
+    font-size: 6em;
+  }
 }
 /*ABOUT*/
 
 .about {
-    background-color: #E0E0E0;
-    min-height: 500px;
-    padding: 6em 0 8em 0;
+  background-color: #E0E0E0;
+  min-height: 500px;
+  padding: 6em 0 8em 0;
 }
 .about img {
-    padding: 0 0 3em 0;
+  padding: 0 0 3em 0;
 }
 .about-header {
-    font-size: 2.5em;
-    font-family: 'Bree Serif', serif;
-    padding: 0 0 0.5em 0;
-    margin: 0;
+  font-size: 2.5em;
+  font-family: 'Bree Serif', serif;
+  padding: 0 0 0.5em 0;
+  margin: 0;
 }
 
 /*PROJECTS*/
 
 .projects {
-    background-color: #BDBDBD;
-    min-height: 500px;
-    padding: 3em 0 5em;
+  background-color: #BDBDBD;
+  min-height: 500px;
+  padding: 3em 0 5em;
 }
 .projects-title {
-    font-family: 'Bree Serif', serif;
-    font-size: 4.55em;
-    line-height: 1.3em;
-    padding: 0;
-    margin: 0 0 25px 0;
+  font-family: 'Bree Serif', serif;
+  font-size: 4.55em;
+  line-height: 1.3em;
+  padding: 0;
+  margin: 0 0 25px 0;
 }
 .projects img {
-    padding: 0 0 20px 0;
+  padding: 0 0 20px 0;
 }
 
 /*RESUME*/
 
 .resume {
-    background-color: #FAFAFA;
-    min-height: 500px;
-    padding: 3em 0 5em;
+  background-color: #FAFAFA;
+  min-height: 500px;
+  padding: 3em 0 5em;
 }
 .resume-title {
-    padding: 10px 0;
+  padding: 10px 0;
 }
 .resume-title span {
-    font-size: 2.5em;
-    border-bottom: 3px solid #FF266A;
+  font-size: 2.5em;
+  border-bottom: 3px solid #FF266A;
 }
 .resume-job,
 .resume-position {
-    font-size: 1.75em;
-    font-family: 'Bree Serif', serif;
-    padding: 30px 0 5px 0;
+  font-size: 1.75em;
+  font-family: 'Bree Serif', serif;
+  padding: 30px 0 5px 0;
 }
 .resume-date,
 .resume-description {
-    font-size: 1.25em;
-    color: #666666;
+  font-size: 1.25em;
+  color: #666666;
 }
 .divider {
-    margin-top: 45px;
-    margin-bottom: 45px;
-    border-bottom: dashed 1px #FF266A;
-    height: 1px;
+  margin-top: 45px;
+  margin-bottom: 45px;
+  border-bottom: dashed 1px #FF266A;
+  height: 1px;
 }
 .bar {
-    width: 100%;
+  width: 100%;
 }
 .bar .skills {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 .bar li {
-    position: relative;
-    background: #ADADAD;
-    height: 30px;
-    margin-top: 15px;
-    border-radius: 5px;
+  position: relative;
+  background: #ADADAD;
+  height: 30px;
+  margin-top: 15px;
+  border-radius: 5px;
 }
 .bar li p {
-    position: relative;
-    left: 5px;
-    color: #f7f7f7;
+  position: relative;
+  left: 5px;
+  color: #f7f7f7;
 }
 .bar-expand {
-    position: absolute;
-    left: 0;
-    top: 0;
-    background: #242424;
-    height: 30px;
-    border-radius: 5px 0 0 5px;
-    width: 10%;
-    transition: ease-in-out;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #242424;
+  height: 30px;
+  border-radius: 5px 0 0 5px;
+  width: 10%;
+  transition: ease-in-out;
 }
 @media only screen and (min-width: 768px) {
-    .bar {
-        width: 95%;
-    }
+  .bar {
+    width: 95%;
+  }
 }
 
 /*SUBFOOTER*/
 
 .subfooter {
-    background-color: #424242;
-    padding: 7em 0 6em;
+  background-color: #424242;
+  padding: 7em 0 6em;
 }
 .email-icon {
-    margin-top: 4px;
+  margin-top: 4px;
 }
 .email-icon img {
-    height: 110px;
+  height: 110px;
 }
 .social-icon {
-    display: inline-block;
-    height: 35px;
-    padding: 0 20px;
+  display: inline-block;
+  height: 35px;
+  padding: 0 20px;
 }
 .email-text {
-    text-align: center;
+  text-align: center;
 }
 @media only screen and (min-width: 768px) {
-    .email-icon img {
-        height: 120px;
-    }
-    .email-text {
-        text-align: left;
-    }
+  .email-icon img {
+    height: 120px;
+  }
+  .email-text {
+    text-align: left;
+  }
 }
 @media only screen and (min-width: 992px) {
-    .social-icon {
-        padding: 0 30px 0 20px;
-    }
+  .social-icon {
+    padding: 0 30px 0 20px;
+  }
 }
 
 /*FOOTER*/
 
 footer {
-    background-color: #212121;
-    padding: 7em 0 3em;
-    font-size: 0.8em;
+  background-color: #212121;
+  padding: 7em 0 3em;
+  font-size: 0.8em;
 }
 footer .glyphicon {
-    vertical-align: text-top;
+  vertical-align: text-top;
 }
 @media only screen and (min-width: 768px) {
-    footer {
-        background-color: #242424;
-        padding: 7em 0 3em;
-        font-size: 1.125em;
-    }
+  footer {
+    background-color: #242424;
+    padding: 7em 0 3em;
+    font-size: 1.125em;
+  }
 }
