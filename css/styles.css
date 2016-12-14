@@ -1,30 +1,61 @@
+
+/*UTILITY*/
+
 * {
   font-family: 'Raleway', sans-serif;
   color: #212121;
 }
-a, a:visited {
+a,
+a:visited {
   color: #FF266A;
   animation: hue-rotate 5s infinite linear;
+  font-weight: bold;
 }
-a:hover, a:active{
+a:hover,
+a:active {
   color: inherit;
 }
-p, li {
+p,
+li {
   font-size: 1.25em;
 }
 .light-text {
   color: #FAFAFA;
 }
-
+.container-main {
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.row {
+  margin-right: -10px;
+  margin-left: -10px;
+}
+.row:before {
+  display: table;
+  content: "";
+}
+.row:after {
+  clear: both;
+}
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.text-center {
+  text-align: center;
+}
 /*INTRO*/
 
 .intro {
-  height: 300px; 
+  height: 300px;
   background: #ff70d8;
-  background: -moz-linear-gradient(45deg,  #ff70d8 0%, #f8ff7f 100%);
-  background: -webkit-linear-gradient(45deg,  #ff70d8 0%,#f8ff7f 100%);
-  background: linear-gradient(45deg,  #ff70d8 0%,#f8ff7f 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff70d8', endColorstr='#f8ff7f',GradientType=1 );
+  background: -moz-linear-gradient(45deg, #ff70d8 0%, #f8ff7f 100%);
+  background: -webkit-linear-gradient(45deg, #ff70d8 0%, #f8ff7f 100%);
+  background: linear-gradient(45deg, #ff70d8 0%, #f8ff7f 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ff70d8', endColorstr='#f8ff7f', GradientType=1);
   animation: hue-rotate 20s infinite linear;
   -webkit-animation: hue-rotate 20s infinite linear;
   animation-delay: 2s;
@@ -41,20 +72,22 @@ p, li {
 .hero {
   height: 200px;
   z-index: 99;
-  margin-top: 5em;
+  width: 75%;
+  margin: 5em auto 0;
 }
 h2 {
   font-family: 'Bree Serif', serif;
   font-size: 3em;
   margin-top: 0.25em;
 }
-h2, .hero p{
+h2,
+.hero p {
   color: #4E4E4E;
-
 }
 @media only screen and (min-width: 768px) {
   .hero {
     height: 250px;
+    width: 55%;
   }
   .intro {
     height: 450px;
@@ -62,7 +95,11 @@ h2, .hero p{
   h2 {
     font-size: 6em;
   }
+  .hero p {
+    padding: 0 30px;
+  }
 }
+
 /*ABOUT*/
 
 .about {
@@ -74,11 +111,22 @@ h2, .hero p{
   margin: 0 0 3em 0;
   border-radius: 5px;
 }
+.about-container {
+  width: 90%;
+  margin: 0 5%;
+}
 .about-header {
   font-size: 2.5em;
   font-family: 'Bree Serif', serif;
   padding: 0 0 0.5em 0;
   margin: 0;
+}
+@media only screen and (min-width: 768px) {
+  .about-container {
+    width: 45%;
+    float: left;
+    margin: 0 2.5%;
+  }
 }
 
 /*PROJECTS*/
@@ -86,17 +134,28 @@ h2, .hero p{
 .projects {
   background-color: #BDBDBD;
   min-height: 500px;
-  padding: 3em 0 5em;
+  padding: 4em 0 5em;
 }
 .projects-title {
   font-family: 'Bree Serif', serif;
   font-size: 4.55em;
   line-height: 1.3em;
   padding: 0;
-  margin: 0 0 25px 0;
+  margin: 0 0 1.25em 0;
+}
+.projects-container {
+  width: 90%;
+  margin: 0 5%;
 }
 .projects img {
   padding: 0 0 20px 0;
+}
+@media only screen and (min-width: 768px) {
+  .projects-container {
+    width: 31.33%;
+    float: left;
+    margin: 0 1%;
+  }
 }
 
 /*RESUME*/
@@ -104,10 +163,23 @@ h2, .hero p{
 .resume {
   background-color: #FAFAFA;
   min-height: 500px;
-  padding: 3em 0 5em;
+  padding: 5em 0;
+}
+.resume-container{
+  width: 90%;
+  margin: 0 5%;
+}
+.resume-sub-container-left{
+  width: 30%;
+  float: left;
+}
+.resume-sub-container-right{
+  width: 63%;
+  float: left;
+  margin: 0 0 0 7%;
 }
 .resume-title {
-  padding: 10px 0;
+  padding: 0.75em 0;
 }
 .resume-title span {
   font-size: 2.5em;
@@ -125,10 +197,18 @@ h2, .hero p{
   color: #666666;
 }
 .divider {
-  margin-top: 45px;
-  margin-bottom: 45px;
+  margin-top: 5em;
+  margin-bottom: 5em;
   border-bottom: dashed 1px #FF266A;
   height: 1px;
+  width: 100%;
+}
+.education, .skills{
+  width: 100%;
+}
+.skills-container{
+  width: 100%;
+  padding-top: 1.5em;
 }
 .bar {
   width: 100%;
@@ -161,8 +241,47 @@ h2, .hero p{
   transition: ease-in-out;
 }
 @media only screen and (min-width: 768px) {
+  .resume-container{
+    width: 75%;
+    margin: 0 12.5%;
+  }
+  .resume-sub-container-left{
+    width: 25%;
+    margin: 0 0 0 7%;
+  }
+  .resume-sub-container-right{
+    width: 54%;
+    margin: 0 7% 0 7%;
+  }
+  .resume-title {
+    margin: 0 0 0 7%;
+  }
+  .divider{
+    width: 85%;
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+  }
+  .skills-container{
+    width: 85%;
+    margin: 0 7.5%;
+  }
   .bar {
     width: 95%;
+  }
+}
+@media only screen  and (min-width : 1224px) {
+  .resume-container{
+    width: 60%;
+    margin: 0 20%;
+  }
+  .divider{
+    width: 65%;
+    margin-left: 17.5%;
+    margin-right: 17.5%;
+  }
+  .skills-container{
+    width: 80%;
+    margin: 0 7.5%
   }
 }
 
@@ -174,6 +293,9 @@ h2, .hero p{
 }
 .email-icon {
   margin-top: 4px;
+  width: 47.5%;
+  float: left;
+  text-align: right;
 }
 .email-icon img {
   height: 110px;
@@ -185,6 +307,8 @@ h2, .hero p{
 }
 .email-text {
   text-align: center;
+  width: 47.5%;
+  float: left;
 }
 @media only screen and (min-width: 768px) {
   .email-icon img {
