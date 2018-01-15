@@ -4,9 +4,6 @@ $(window).load(function () {
     enter: function () {
         $('.project-flip').addClass('animated flipInX');
       }
-      //    exit: function() { 
-      //      $('#test').removeClass('animated flipInX');
-      //    }
   });
   var in_view = new Waypoint.Inview({
     element: $('.glyphicon-headphones')[0],
@@ -34,4 +31,26 @@ $(window).load(function () {
       }, 1500, function () {});
     }
   });
+});
+
+$( ".alein" ).click(function() {
+  $(".alien-slot").fadeIn(300);
+  $(".trees-slot").fadeOut(300);
+  $(".charelston-slot").fadeOut(300);
+  $(this).addClass("active");
+  $(".tree, .charelston").removeClass("active");
+});
+$( ".tree" ).click(function() {
+  $(".alien-slot").fadeOut(300);
+  $(".trees-slot").fadeIn(300);
+  $(".charelston-slot").fadeOut(300);
+  $(this).addClass("active");
+  $(".alein, .charelston").removeClass("active");
+});
+$( ".charelston" ).click(function() {
+  $(".alien-slot").fadeOut(300);
+  $(".trees-slot").fadeOut(300);
+  $(".charelston-slot").fadeIn(300);
+  $(this).addClass("active");
+  $(".alein, .tree").removeClass("active");
 });

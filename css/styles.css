@@ -1,14 +1,69 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
 /*UTILITY*/
 
 * {
   font-family: 'Raleway', sans-serif;
   color: #212121;
 }
+body{
+  margin: 0;
+}
 a,
 a:visited {
-  color: #FF266A;
-  animation: hue-rotate 5s infinite linear;
-  font-weight: bold;
+/*  color: #ffcf24;*/
+/*  animation: hue-rotate 5s infinite linear;*/
+/*  font-weight: bold;*/
+  text-decoration: underline;
+  color: inherit;
 }
 a:hover,
 a:active {
@@ -44,8 +99,10 @@ li {
 .text-center {
   text-align: center;
 }
+.desktop{
+  display: none;
+}
 /*INTRO*/
-
 .intro {
   height: 300px;
   background: #ff70d8;
@@ -79,7 +136,8 @@ h2 {
 }
 h2,
 .hero p {
-  color: #4E4E4E;
+  color: #383838;
+  line-height: 0.95em;
 }
 @media only screen and (min-width: 768px) {
   .hero {
@@ -90,10 +148,16 @@ h2,
     height: 450px;
   }
   h2 {
-    font-size: 6em;
+    font-size: 7.5em;
+    line-height: 0.95em;
+    margin-bottom: 0.25em;
   }
   .hero p {
     padding: 0 30px;
+    
+  }
+  .desktop{
+    display: block;
   }
 }
 
@@ -102,7 +166,7 @@ h2,
 .about {
   background-color: #E0E0E0;
   min-height: 500px;
-  padding: 6em 0 8em 0;
+  padding: 5em 0 6em 0;
 }
 .about img {
   margin: 0 0 3em 0;
@@ -160,7 +224,7 @@ h2,
 .resume {
   background-color: #FAFAFA;
   min-height: 500px;
-  padding: 5em 0;
+  padding: 3em 0 5em;
 }
 .resume-container{
   width: 90%;
@@ -180,7 +244,7 @@ h2,
 }
 .resume-title span {
   font-size: 2.5em;
-  border-bottom: 3px solid #FF266A;
+  border-bottom: 3px solid #ffcf24;
 }
 .resume-job,
 .resume-position {
@@ -196,7 +260,7 @@ h2,
 .divider {
   margin-top: 5em;
   margin-bottom: 5em;
-  border-bottom: dashed 1px #FF266A;
+  border-bottom: dashed 2px #ffcf24;
   height: 1px;
   width: 100%;
 }
@@ -338,4 +402,79 @@ footer .glyphicon {
     padding: 7em 0 3em;
     font-size: 1.125em;
   }
+}
+
+
+/*Photo Page*/
+.tabs{
+  display: block;
+  width: 872px;
+  margin: 30px auto 40px;
+}
+.tabs div{
+  display: inline-block;
+  width: 200px;
+  margin: 0 15px 0 0;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 2px;
+  background: #e4e4e4;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.tabs div:last-child{
+  margin: 0;
+}
+.tabs div.active, .tabs div:hover{
+  background: #7e7e7e;
+
+}
+.tabs div p{
+  font-family: 'Raleway', sans-serif;
+  font-size: 17px;
+  letter-spacing: 0.75px;
+  transition: 0.3s;
+}
+
+
+.tabs div.active p, .tabs div:hover p{
+color: #ffffff;
+}
+
+.photo-container{
+  width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+.photo-container img{
+  margin-bottom: 40px;
+}
+
+@media only screen and (max-width: 768px) {
+  .tabs{
+    width: 100%;
+    margin: 10px auto;
+  }
+  .tabs div{
+    float: left;
+    display: block;
+    width: 46.25%;
+    margin: 5px 2.5% 0;
+  }
+  .tabs div:nth-child(even){
+    margin: 5px 2.5% 0 0;
+  }
+  .tabs div:last-child{
+    margin-bottom: 20px;
+  }
+  .photo-container{
+    width: 95%;
+    margin: 0 2.5%;
+  }
+  .photo-container img{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
 }
