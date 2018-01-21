@@ -33,6 +33,9 @@ $(window).load(function () {
   });
 });
 
+$( ".back" ).click(function() {
+  window.location.href="index.html";
+});
 $( ".alein" ).click(function() {
   $(".alien-slot").fadeIn(300);
   $(".trees-slot").fadeOut(300);

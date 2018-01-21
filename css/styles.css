@@ -50,28 +50,30 @@ table {
 
 /*UTILITY*/
 
-* {
-  font-family: 'Raleway', sans-serif;
-  color: #212121;
-}
+
 body{
   margin: 0;
 }
-a,
+a:not(.no-bkgd),
 a:visited {
 /*  color: #ffcf24;*/
 /*  animation: hue-rotate 5s infinite linear;*/
 /*  font-weight: bold;*/
-  text-decoration: underline;
-  color: inherit;
+/*  text-decoration: underline;*/
+  color: #212121;
+  background: #ffcf24;
 }
 a:hover,
 a:active {
-  color: inherit;
+  text-decoration: none;
+  color: #212121;
 }
 p,
 li {
+  font-family: 'Raleway', sans-serif;
+  color: #212121;
   font-size: 1.25em;
+  line-height: 1.3em;
 }
 .light-text {
   color: #FAFAFA;
@@ -137,7 +139,6 @@ h2 {
 h2,
 .hero p {
   color: #383838;
-  line-height: 0.95em;
 }
 @media only screen and (min-width: 768px) {
   .hero {
@@ -290,6 +291,9 @@ h2,
   position: relative;
   left: 5px;
   color: #f7f7f7;
+  font-size: 1.05em;
+  line-height: 30px;
+  padding-left: 2px
 }
 .bar-expand {
   position: absolute;
@@ -365,6 +369,7 @@ h2,
   display: inline-block;
   height: 35px;
   padding: 0 20px;
+  margin-top: 5px;
 }
 .email-text {
   text-align: center;
