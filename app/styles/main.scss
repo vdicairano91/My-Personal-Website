@@ -36,20 +36,18 @@ body {
     background-color: $primary;
   }
   &.hidden {
+    position: fixed;
     .outlined-text p {
       transform: translate(100px, 100px);
       opacity: 0;
+      pointer-events: none;
     }
     .full-text p {
       transform: translate(-100px, -100px);
       opacity: 0;
+      pointer-events: none;
     }
   }
-}
-.full-text,
-.outlined-text {
-  position: absolute;
-  width: 100%;
 }
 .full-text p,
 .outlined-text p {
@@ -63,6 +61,15 @@ body {
   right: 0;
   z-index: -1;
   transition: 0.75s ease-out;
+  transition-delay: 0.25s;
+}
+.about-text{
+
+  .full-text p,
+  .outlined-text p {
+    font-size: 6.25em;
+    line-height: 1.35em;
+  }
 }
 .outlined-text p {
   color: transparent;
@@ -125,13 +132,17 @@ body {
   left: 0;
   height: 100vh;
   width: 100vw;
+  pointer-events: none;
 }
 @keyframes shapes{
-  to{
+  0%{
     transform: translate(0,0)
   }
-  from{
+  50%{
     transform: translate(-50px,-50px)
+  }
+  100%{
+    transform: translate(0,-50px)
   }
 }
 .triangle {
@@ -180,5 +191,50 @@ body {
   & + .circle + .circle + .circle {
     top: 90vh;
     right: 5vw;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+#workContainer {
+  position: fixed;
+  height: 100vh;
+  width: 95vw;
+  right: 0;
+  display: flex;
+  align-items: center;
+  &.hidden{
+    display: none;
+  }
+}
+.work-text-container {
+  overflow: scroll;
+  height: 100%;
+  position: relative;
+  left: -50px;
+  z-index: 9999;
+  color: green;
+}
+.work-text {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.work-images{    
+  height: 360px;
+  width: 1220px;
+  position: relative;
+  img{
+    position: absolute;
+    top: 0;
+    width: 100%;
   }
 }
